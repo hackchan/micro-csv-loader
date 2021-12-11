@@ -1,0 +1,40 @@
+@api = http://localhost:5000/api/v1/csv
+
+###test router GET
+GET {{api}}
+
+###test router POST
+POST {{api}}
+Content-type: application/json
+
+{
+  "name":"Fabio Rojas",
+  "description":"developmnet fullstack js"
+}
+
+###test router PUT UPDATE FULL OBJECT
+PUT {{api}}/125
+Content-type: application/json
+
+{
+  "name":"Daniel Rojas",
+  "description":"developmnet fullstack js"
+}
+
+###test router PATCH UPDATE PARTIAL
+PATCH {{api}}/125
+Content-type: application/json
+
+{
+  "name":"David Rojas"
+}
+
+###test router DELETE
+DELETE {{api}}/125
+
+
+###find all by size
+GET {{api}}/products?size=10
+
+###Users
+GET {{api}}/users?limit=10&offset=25
